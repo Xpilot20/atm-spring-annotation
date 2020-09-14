@@ -8,7 +8,7 @@ public class Main {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("bean.xml");
         ATM atm = context.getBean(ATM.class);
-
+        
         String name = atm.validateCustomer(2,2345);
         System.out.println(name + " has " + atm.getBalance());
         atm.withdraw(200);
